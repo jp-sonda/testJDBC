@@ -1,0 +1,12 @@
+.svn
+.settings
+target
+.classpath
+bin
+build
+deprecated
+tmp
+*.log
+.idea/
+.project
+*.iml
