@@ -7,10 +7,13 @@ import java.sql.SQLException;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
-
+import oracle.jdbc.driver.OracleDriver;
+ 
 public class TestConnUsingJDBC {
 	private static final Logger logger = LogManager
 			.getLogger(TestConnUsingJDBC.class);
+
+        private static OracleDriver dummy;
 
 	public static void main(String[] args)  {
 
@@ -35,7 +38,7 @@ public class TestConnUsingJDBC {
 		try {
 			Class.forName(driverName);
 		} catch (ClassNotFoundException e) {
-			throw new RuntimeException("Erro ao tentar carregar a classe ''" + driverName + "'", e);
+			throw new RuntimeException("Erro ao tentar carregar a classe '" + driverName + "'", e);
 		}
 
 		Connection con = null;
@@ -49,3 +52,4 @@ public class TestConnUsingJDBC {
 	}
 
 }
+
